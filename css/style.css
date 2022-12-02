@@ -1,0 +1,92 @@
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #1B2021;
+}
+
+.relogio{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../img/clock.png') center / cover;
+    border: 12px solid #1B2021;
+    border-radius: 50%;
+    box-shadow: -4px -4px 6px rgba(60, 60, 60, .5),
+                inset 4px 4px 6px rgba(0, 0, 0, .5),
+                inset -4px -4px 6px rgba(60, 60, 60, .3),
+                4px 4px 6px rgba(10, 10, 10, .3);
+}
+
+.relogio::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #ffffff;
+    border-radius: 50%;
+    z-index: 15;
+}
+
+.relogio .horas,
+.relogio .minutos,
+.relogio .segundos{
+    position: absolute;
+}
+
+.relogio .horas,
+.relogio .horas .hr{
+    width: 160px;
+    height: 160px;
+}
+
+.relogio .minutos,
+.relogio .minutos .min{
+    width: 190px;
+    height: 190px;
+}
+
+.relogio .segundos,
+.relogio .segundos .seg{
+    width: 230px;
+    height: 230px;
+}
+
+.hr, .min, .seg{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr::before{
+    content: ' ';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background-color: #FF3D68;
+    z-index: 10;
+    border-radius: 10px;
+}
+
+.min::before{
+    content: ' ';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background-color: #FFFFFF;
+    z-index: 11;
+    border-radius: 8px;
+}
+
+.seg::before{
+    content: ' ';
+    position: absolute;
+    width: 3px;
+    height: 140px;
+    background-color: #39A2DB;
+    z-index: 12;
+    border-radius: 2px;
+}
